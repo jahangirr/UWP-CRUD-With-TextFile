@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="DoctorList.DoctorDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DoctorList"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="LightGray">
+
+      
+        <Grid x:Name="LLL_" Margin="10,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel  Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                <Button  Content="Insert"  Click="Button_Click_1" x:Name="Insert" Visibility="Collapsed" />
+                <Button  Content="Edit"  Click="Button_Click_2" x:Name="Edit" Visibility="Visible" />
+                <Button  Content="Delete"  Click="Button_Click_3" x:Name="Delete" Visibility="Visible" />
+            </StackPanel>
+
+            <TextBox  Grid.Row="1" Grid.Column="0" Text="{Binding doctorId }"   Margin="10,30,0,0"  x:Name="doctorId"  LostFocus="doctorId_LostFocus" />
+            <TextBox Grid.Row="2" Grid.Column="0" Text="{Binding  doctorName }"   Margin="10,60,0,0"  x:Name="doctorName" LostFocus="doctorName_LostFocus" />
+            <TextBox Grid.Row="3" Grid.Column="0" Text="{Binding doctorAddress}"   Margin="10,90,0,0"  x:Name="doctorAddress" LostFocus="doctorAddress_LostFocus" />
+
+            <Button Grid.Row="4" Grid.Column="0" Content="BackToMaster" Click="Button_Click" />
+
+          
+
+        </Grid>
+
+    </Grid>
+
+   
+</Page>
